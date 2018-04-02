@@ -29,7 +29,7 @@ const HTMLShell = (html, state) => `
 app.use(express.static(path.join(__dirname, "dist")));
 
 app.get('**', (req, res) => {
-	const store = createStore({ count: 0, todo: [] })
+	const store = createStore({ count: 0 })
 
 	let state = store.getState()
 

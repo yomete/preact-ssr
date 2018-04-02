@@ -1491,8 +1491,6 @@ var _unistore = __webpack_require__(12);
 
 var _unistore2 = _interopRequireDefault(_unistore);
 
-var _preact = __webpack_require__(1);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var actions = exports.actions = function actions(store) {
@@ -1602,7 +1600,7 @@ exports = module.exports = __webpack_require__(7)(false);
 
 
 // module
-exports.push([module.i, "body {\n  background-color: #fefefe;\n}", ""]);
+exports.push([module.i, "body {\n  background-image: linear-gradient(to right top, #2b0537, #820643, #c4442b, #d69600, #a8eb12);\n  height: 100vh;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n}\na {\n  display: block;\n  color: white;\n  text-decoration: underline;\n}\np {\n  color: white\n}\n.count p {\n  color: white;\n  font-size: 60px;\n}\nbutton:focus {\n  outline: none;\n}\n.increment-btn {\n  background-color: #1A2C5D;\n  border: none;\n  color: white;\n  border-radius: 3px;\n  padding: 10px 20px;\n  font-size: 14px;\n  margin: 0 10px;\n}\n.decrement-btn {\n  background-color: #BC1B1B;\n  border: none;\n  color: white;\n  border-radius: 3px;\n  padding: 10px 20px;\n  font-size: 14px;\n  margin: 0 10px;\n}", ""]);
 
 // exports
 
@@ -2224,22 +2222,26 @@ var App = exports.App = (0, _preact2.connect)('count', _store.actions)(function 
       decrement = _ref.decrement;
   return (0, _preact.h)(
     'div',
-    null,
+    { 'class': 'count' },
     (0, _preact.h)(
       'p',
       null,
-      'Count: ',
       count
     ),
     (0, _preact.h)(
       'button',
-      { onClick: increment },
+      { 'class': 'increment-btn', onClick: increment },
       'Increment'
     ),
     (0, _preact.h)(
       'button',
-      { onClick: decrement },
+      { 'class': 'decrement-btn', onClick: decrement },
       'Decrement'
+    ),
+    (0, _preact.h)(
+      _preactRouter.Link,
+      { href: '/about' },
+      'About'
     )
   );
 });
@@ -2298,9 +2300,9 @@ var About = exports.About = function About() {
         "div",
         null,
         (0, _preact.h)(
-            "h1",
+            "p",
             null,
-            "About page"
+            "This is a Preact app being rendered on the server. It uses Unistore for state management and preact-router for routing."
         ),
         (0, _preact.h)(
             _match.Link,

@@ -1,3 +1,41 @@
 body {
-  background-color: #fefefe;
+  background-image: linear-gradient(to right top, #2b0537, #820643, #c4442b, #d69600, #a8eb12);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+a {
+  display: block;
+  color: white;
+  text-decoration: underline;
+}
+p {
+  color: white
+}
+.count p {
+  color: white;
+  font-size: 60px;
+}
+button:focus {
+  outline: none;
+}
+.increment-btn {
+  background-color: #1A2C5D;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  padding: 10px 20px;
+  font-size: 14px;
+  margin: 0 10px;
+}
+.decrement-btn {
+  background-color: #BC1B1B;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  padding: 10px 20px;
+  font-size: 14px;
+  margin: 0 10px;
 }
