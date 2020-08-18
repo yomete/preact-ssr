@@ -35,7 +35,7 @@ app.get('**', (req, res) => {
 
 	let html = render(
 		<Provider store={store}>
-			<Router />
+			<Router url={req.url} />
 		</Provider>
 	)
 
